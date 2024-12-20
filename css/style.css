@@ -1,0 +1,185 @@
+/* --- Estilos básicos y reinicio de márgenes --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Fuente principal */
+    padding: 20px; /* Espaciado interno */
+}
+
+/* --- Encabezado (Header) --- */
+header {
+    display: flex; /* Distribución flexible */
+    justify-content: space-between; /* Elementos separados */
+    align-items: center; /* Alineación vertical */
+    background: #333; /* Color de fondo */
+    color: white; /* Color de texto */
+    padding: 10px 20px; /* Espaciado interno */
+    z-index: 1000; /* Aseguramos que el menú esté por encima de otros elementos */
+}
+
+
+header h1 {
+    font-size: 24px; /* Tamaño del título */
+}
+
+header h4 {
+    font-size: 18px; /* Tamaño del subtítulo */
+}
+
+.icono-carrito {
+    color: white; /* Color del icono */
+    font-size: 24px; /* Tamaño del icono */
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* --- Navegación principal --- */
+nav ul {
+    list-style-type: none; /* Sin viñetas */
+    background: #555; /* Fondo oscuro */
+    padding: 10px; /* Espaciado interno */
+}
+
+nav ul li {
+    display: inline; /* Elementos en línea */
+    margin-right: 15px; /* Separación entre enlaces */
+}
+
+nav ul li a {
+    color: white; /* Color de texto */
+    text-decoration: none; /* Sin subrayado */
+}
+
+/* Estilos para el carrusel */
+.carousel {
+    margin-top: 20px; /* Espacio superior antes del carrusel */
+    background: rgb(238,174,202);
+background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%); 
+}
+
+.carousel-item img {
+    height: 300px; /* Altura fija de las imágenes */
+    object-fit:scale-down; /* Las imágenes cubren todo el espacio disponible */
+}
+
+
+/* --- Estilos de productos --- */
+.productos {
+    display: grid; /* Distribución en cuadrícula */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ajuste automático */
+    gap: 20px; /* Separación entre productos */
+    margin-top: 20px; /* Margen superior */
+}
+
+.producto {
+    background: #f4f4f4; /* Fondo claro */
+    padding: 15px; /* Espaciado interno */
+    border-radius: 5px; /* Bordes redondeados */
+    text-align: center; /* Texto centrado */
+}
+
+.producto ul li {
+    display:inline-block; /* Elementos en línea */
+    margin-right: 0px; /* Separación entre enlaces */
+}
+.producto h2 {
+    margin-bottom: 10px; /* Espacio inferior */
+}
+
+.producto .precio {
+    color: green; /* Texto en color verde */
+    font-size: 18px; /* Tamaño de fuente */
+}
+
+.producto button {
+    background: #333; /* Fondo oscuro */
+    color: white; /* Texto blanco */
+    border: none; /* Sin bordes */
+    padding: 10px 15px; /* Espaciado interno */
+    cursor: pointer; /* Mano al pasar por encima */
+}
+
+.producto button:hover {
+    background: #555; /* Cambio de color al pasar el cursor */
+}
+
+.producto img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+/* Estilos para el pie de página */
+footer {
+    padding: 20px; /* Espacio interno */
+    background-color: #f8f9fa; /* Color de fondo claro */
+    text-align: center; /* Centramos el contenido */
+    margin-top: 40px; /* Espacio superior antes del pie de página */
+}
+
+footer a {
+    text-decoration: none; /* Quitamos el subrayado de los enlaces */
+    color: #007bff; /* Color azul para el enlace */
+    font-size: 18px; /* Tamaño del texto */
+}
+
+footer form {
+    margin-top: 20px; /* Espacio superior antes del formulario */
+}
+
+footer form h1 {
+    font-size: 24px; /* Tamaño del título del formulario */
+}
+
+footer input, footer textarea {
+    width: 100%; /* Campos ocupan todo el ancho disponible */
+    padding: 10px; /* Espacio interno en los campos */
+    margin-bottom: 10px; /* Espacio inferior entre los campos */
+    border: 1px solid #ced4da; /* Borde gris claro */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+footer button {
+    padding: 10px 20px; /* Espacio interno del botón */
+    background-color: #007bff; /* Color de fondo azul */
+    color: white; /* Color del texto en blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+}
+
+footer button:hover {
+    background-color: #0056b3; /* Color más oscuro al pasar el mouse*/
+}
+
+/* Estilos para las imágenes de redes sociales */
+footer .RSocial {
+    width: 40px; /* Ancho de los iconos */
+    margin: 5px; /* Espacio alrededor de cada icono */
+}
+
+  /* pseudo-clase */
+
+  /* media query para pantalla mediana */
+  @media (max-width:768px){
+      .producto { 
+          width: 45%; /* dos productos por fila en pantallas medianas */
+      } 
+  }
+  
+  /* media query para pantalla pequeña */
+  @media (max-width:720px){
+      .producto { 
+          width: 100%; /* un producto por fila en pantallas pequeñas */
+      } 
+      header {
+          padding : 15px ; /* ajustamos el pádding del encabezado en moviles */
+      }
+      .contenedor-productos{
+          padding : 10px ; /* menor padding en dispositivos pequeños */
+      }
+  }
+
